@@ -18,20 +18,28 @@
 	\frame{\titlepage}
 	% methodology
 	\section{Methodology}
-	\graphicspath{{images/methodology/PD_lambda_0/}}
+	\graphicspath{{images/methodology/SMC/uncertainty_100_alpha_0/}}
 	\begin{frame}
 		\frametitle{Comparison}
-		\begin{minipage}[t]{0.325\textwidth}
+		
+		\fboxrule=3pt
+		\fcolorbox{red}{white}{
+		\begin{minipage}[t]{0.4\textwidth}
 			\centering
-			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{1}{100}
+			{\large \textbf{fixed gains \\}}
+			\vspace{.5cm}
+			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{10}{300}
 		\end{minipage}
-		\begin{minipage}[t]{0.325\textwidth}
+		}
+		\hspace{.05\textwidth}
+		\fcolorbox{black}{white}{
+		\begin{minipage}[t]{0.4\textwidth}
 			\centering
-			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{1}{100}
+			{\large \textbf{with optimization \\}}
+			\vspace{.5cm}
+			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{10}{300}
 		\end{minipage}
-		\begin{minipage}[t]{0.325\textwidth}
-			\centering
-			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{1}{100}
-		\end{minipage}				
+		}
+
 	\end{frame}
 \end{document}
