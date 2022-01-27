@@ -18,28 +18,30 @@
 	\frame{\titlepage}
 	% methodology
 	\section{Methodology}
-	\graphicspath{{images/methodology/SMC/uncertainty_100_alpha_0/}}
+	
 	\begin{frame}
-		\frametitle{Comparison}
+		\frametitle{Sliding mode control with fixed gains}
 		
 		\fboxrule=3pt
-		\fcolorbox{red}{white}{
-		\begin{minipage}[t]{0.4\textwidth}
+		%\fcolorbox{red}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/uncertainty_100_alpha_0/}}
 			\centering
-			{\large \textbf{fixed gains \\}}
-			\vspace{.5cm}
-			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{10}{300}
+			{\large \textbf{factory value ($m_6=m_6$)}}
+			\vspace{.2cm}			
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
 		\end{minipage}
-		}
-		\hspace{.05\textwidth}
-		\fcolorbox{black}{white}{
-		\begin{minipage}[t]{0.4\textwidth}
+		%}
+		\hspace{.08\textwidth}
+		%\fcolorbox{black}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/uncertainty_100_alpha_0.005/}}
 			\centering
-			{\large \textbf{with optimization \\}}
-			\vspace{.5cm}
-			\animategraphics[controls={play}, loop, width=\textwidth]{30}{}{10}{300}
+			{\large \textbf{new mass value ($m_6=2 m_6$)}}
+			\vspace{.2cm}
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
 		\end{minipage}
-		}
+		%}
 
 	\end{frame}
 \end{document}
