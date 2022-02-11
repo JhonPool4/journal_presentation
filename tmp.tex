@@ -1,0 +1,109 @@
+% document configuration
+\include{document_config}
+
+% introduction parameters
+\title[Article presentation]{title}
+
+\author[J. Charaja and S. Munoz]{Jhon Charaja\inst{1} and Samir Munoz\inst{2}}
+\institute[USP]{
+	\inst{1} Universidade de São Paulo, Brasil
+}
+\institute[UTEC]{
+	\inst{2} Universidad de Ingeniería y Tecnología, Perú
+}
+\date{\today}
+
+
+\begin{document}
+	\frame{\titlepage}
+	% methodology
+	\section{Methodology}
+	
+	\begin{frame}
+		\frametitle{Sliding mode control with fixed gains}
+		
+		\fboxrule=3pt
+		%\fcolorbox{red}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/exp1/circular/uncertainty_100_alpha_0/}}
+			\centering
+			{\large \textbf{factory value ($m_6=m_6$)}}
+			%\vspace{.2cm}			
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
+		\end{minipage}
+		%}
+		\hspace{.08\textwidth}
+		%\fcolorbox{black}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/exp1/circular/uncertainty_100_alpha_0/}}
+			\centering
+			{\large \textbf{new mass value ($m_6=2 m_6$)}}
+			%\vspace{.2cm}
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
+		\end{minipage}
+		%}
+		
+		\begin{table}
+			\caption{trajectory tracking error with L2 norm}
+			\centering
+			\begin{tabular}{c c c c c}
+			\toprule
+			uncertainty & position & orientation & jerk linear & jerk angular \\
+			\midrule
+			0 \%  & 0 & 0 & 0 & 0 \\ 
+			100 \% & 0 & 0 & 0 & 0  \\
+			\bottomrule
+			\end{tabular}
+		\end{table}
+
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Sliding mode control with optimization equations}
+		
+		\fboxrule=3pt
+		%\fcolorbox{red}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/exp1/circular/uncertainty_100_alpha_0/}}
+			\centering
+			{\large \textbf{fixed gains ($m_6=2m_6$)}}
+			%\vspace{.2cm}			
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
+		\end{minipage}
+		%}
+		\hspace{.08\textwidth}
+		%\fcolorbox{black}{white}{
+		\begin{minipage}[t]{0.45\textwidth}
+			\graphicspath{{images/methodology/SMC/exp1/circular/uncertainty_100_alpha_0/}}
+			\centering
+			{\large \textbf{optimized gains ($m_6=2 m_6$)}}
+			%\vspace{.2cm}
+			\animategraphics[controls={play}, loop, width=\textwidth]{60}{}{10}{20}
+		\end{minipage}
+		%}
+		
+		\begin{table}
+			\caption{trajectory tracking error with L2 norm}
+			\centering
+			\begin{tabular}{c c c c c}
+			\toprule
+			gain type & position ($\mathrm{mm}$) & orientation ($^\circ$) & jerk linear ($\mathrm{\frac{mm}{s^3}}$) & jerk angular \\
+			\midrule
+			fixed  & 20 & 50 & 8 & 0 \\ 
+			optimized & 12 & 14 & 6 & 0  \\
+			\bottomrule
+			\end{tabular}
+		\end{table}
+
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Sliding mode control}
+		\graphicspath{{/home/jhon/Desktop/journal_presentation/images/methodology/SMC/exp1/circular}}
+		\begin{figure}
+			\centering
+			\includegraphics{pe_cartesian_L_3_K_1_alpha_0.005_beta_0.1_gamma_0.9_delta_100_t_100.eps}
+		\end{figure}
+	\end{frame}
+\end{document}
